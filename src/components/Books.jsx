@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import topReads from "../../topReads.json";
+import Rating from '@mui/material/Rating';
+import { GiShoppingCart } from "react-icons/gi";
+import { MdRemoveShoppingCart } from "react-icons/md";
 
 
 const Books = () => {
@@ -28,28 +31,50 @@ const Books = () => {
                 fontWeight:"700",
                 padding:"1rem 0"
             }}>Top Reads</h1>
-            <div className="book-list">
-                {data
-                    .filter(book => book.title.toLowerCase().includes(search.toLowerCase()))
-                    .map((book) => (
-                        <div className="book-card" key={book.id}>
-                            <img src={book.image} alt={book.title} className="book-image"/>
-                            <h3 className="book-title">
-                                {book.title} by {book.author}
-                            </h3>
-                            <h5>{book.currency} {book.price}</h5>
-                            <p>Rating: {book.rating} <span>({book.reviews})</span></p>
-                            <p 
-                                className={book.availability === 'In Stock' 
-                                    ? 'availability in-stock' 
-                                    : 'availability out-of-stock'}
-                            >
-                                Availability: {book.availability}
-                            </p>
-                        </div>
-                    ))
-                }
+             <div className="book-list">
+        {data.map((book) => (
+          <div className="book-card" key={book.id}>
+            <img src={book.image} alt={book.title} className="book-image" />
+            <h3 className="book-title">
+              {book.title} by {book.author}
+            </h3>
+            <h5>
+              {book.currency} {book.price}
+            </h5>
+            <div style={{
+                display: "flex",
+                justifyContent:"center"
+            }}>
+            <Rating name="read-only" value={book.rating} precision={0.5} readOnly />
+            <span style={{
+                color:"#adb5bd",
+            }}>({book.reviews})</span>
             </div>
+            <p>
+              {book.availability.trim().toLowerCase() === "out of stock" && (
+                <p className={
+                    book.availability.trim().toLowerCase() === "out of stock"
+                      &&
+                       "availability "
+                  }
+                  style={{
+                    color:"#e74c3c"
+                  }}><MdRemoveShoppingCart size={30}/>Currently {book.availability}!!</p>
+              )}
+            </p>
+            {
+              book.availability.trim().toLowerCase() === "in stock" && (
+                <button className="cartButton">
+                  <GiShoppingCart size={25} style={{
+                    marginBottom:"5px",
+                  }}/>
+                  Add To Cart
+                </button>
+              )
+            }
+          </div>
+        ))}
+      </div>
         </div>
     );
 }

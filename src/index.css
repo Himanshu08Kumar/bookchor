@@ -1,4 +1,4 @@
-.coupons{
+.coupons {
   padding: 1px 4%;
   margin: 0 auto 1rem;
   width: 100%;
@@ -6,35 +6,33 @@
   font-weight: 600;
   background-color: #59cd90;
 }
-.couponsList{
+.couponsList {
   display: flex;
   list-style: none;
   gap: 0 0.5rem;
   cursor: pointer;
 }
-.couponsList li{
+.couponsList li {
   font-weight: 600;
   padding: 0.2rem 0.5rem;
   transition: all 0.3s;
 }
 
-.couponsList li:hover{
-  /* background: #f7ede2; */
+.couponsList li:hover {
   color: #264653;
   border-radius: 5px;
   transform: scale(1.1);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 0.3 1rem;
 }
-.coupons-text1{
+.coupons-text1 {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
-.couponsList1{
+.couponsList1 {
   padding-right: 2px;
 }
-.header{
+.header {
   display: flex;
 }
 /* Books container */
@@ -85,7 +83,7 @@
 }
 
 .book-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -100,7 +98,7 @@
 /* Book title styling */
 .book-title {
   color: #2c3e50;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
 /* Existing styles for the book list, input, and container will remain the same */
@@ -128,19 +126,33 @@
   color: #27ae60; /* Green color for in stock */
 }
 
-.out-of-stock {
+.out {
   color: #e74c3c; /* Red color for out of stock */
 }
-
+.cartButton{
+  border: none;
+  background-color: #495057;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transition: all 0.3s;
+}
+.cartButton:hover{
+  color: #3d405b;
+  background-color: #adb5bd;
+}
 
 
 /* Responsive styling for smaller devices */
 @media (max-width: 768px) {
   .book-card {
-      padding: 15px;
+    padding: 15px;
   }
 
   .search-input {
-      width: 100%;
+    width: 100%;
   }
 }
