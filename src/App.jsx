@@ -4,6 +4,7 @@ import Coupons from './components/Coupons'
 import SearchBox from './components/SearchBox'
 import Books from './components/Books'
 import Caurosel from './components/Caurosel'
+import Login from './components/Login'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AllBooks from './components/AllBooks'
 import {
@@ -30,7 +31,11 @@ const App = () => {
     },
     {
       path:'/book/:id',
-      element:<BookDetails/>
+      element:<BookDetails/>,
+    },
+    {
+      path:'/login',
+      element:<Login/>,
     }
   ])
   return (

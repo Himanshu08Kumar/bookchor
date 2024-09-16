@@ -38,6 +38,7 @@ const AllBooks = () => {
             className="book-card"
             key={book.id}
             onClick={() => handleBookClick(book.id)}
+            style={{cursor:"pointer"}}
           >
             <img src={book.image} alt={book.title} className="book-image" />
             <h3 className="book-title">
