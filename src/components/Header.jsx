@@ -2,8 +2,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>
-        <select name="" id="">
+    <div style={{
+      padding:"0 2%"
+    }}>
+        {/* <select name="" id="">
             <option value="">Shop By Category</option>
             <option value="">Fiction</option>
             <option value="">Non-Fiction</option>
@@ -21,9 +23,9 @@ const Header = () => {
             <option value="">Hindi Literature</option>
             <option value="">Agatha Christie - Crime Thriller Mystery</option>
             <option value="">Used Books</option>
-        </select>
+        </select> */}
 
-        <ul >
+        <ul className='couponsList coupons-text1'>
             <li>Used Books</li>
             <li>39 Store</li>
             <li>59 Store</li>

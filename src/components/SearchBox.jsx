@@ -8,7 +8,8 @@ const SearchBox = () => {
     <div
       style={{
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
+        padding:'0 4%'
       }}
     >
       <div
@@ -17,19 +18,6 @@ const SearchBox = () => {
         }}
       >
         <img src={Logo} alt="" height={30} />
-        {/* <input
-          type="text"
-          style={{
-            // display:"flex",
-            padding: "0.5rem 1rem",
-            width: "80%",
-            marginLeft: "1rem",
-          }}
-          placeholder="Search bu ISBN, Author, Title"
-        /> */}
-        {/* <button>
-          <FcSearch />
-        </button> */}
       </div>
       <p style={{
         fontSize: "1.2rem",
