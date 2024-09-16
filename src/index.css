@@ -129,7 +129,7 @@
 .out {
   color: #e74c3c; /* Red color for out of stock */
 }
-.cartButton{
+.cartButton {
   border: none;
   background-color: #495057;
   color: white;
@@ -137,14 +137,15 @@
   font-weight: 600;
   border-radius: 8px;
   padding: 0.3rem 0.8rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   transition: all 0.3s;
 }
-.cartButton:hover{
+.cartButton:hover {
   color: #3d405b;
   background-color: #adb5bd;
 }
-
 
 /* Responsive styling for smaller devices */
 @media (max-width: 768px) {

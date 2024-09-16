@@ -9,7 +9,7 @@ const SearchBox = () => {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        padding:'0 4%'
+        padding: "0 4%",
       }}
     >
       <div
@@ -19,17 +19,21 @@ const SearchBox = () => {
       >
         <img src={Logo} alt="" height={30} />
       </div>
-      <p style={{
-        fontSize: "1.2rem",
-      }}>
-        <span style={{
-          padding:'1rem',
-          border: "none",
-          backgroundColor: "#98f5e126",
-          color:"#02c39a",
-          borderRadius: "50%",
-          margin:"5px"
-        }}>
+      <p
+        style={{
+          fontSize: "1.2rem",
+        }}
+      >
+        <span
+          style={{
+            padding: "1rem",
+            border: "none",
+            backgroundColor: "#98f5e126",
+            color: "#02c39a",
+            borderRadius: "50%",
+            margin: "5px",
+          }}
+        >
           <FaRegUser />
         </span>
         Login
