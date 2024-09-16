@@ -3,7 +3,10 @@ import React from 'react'
 const Header = () => {
   return (
     <div style={{
-      padding:"0 2%"
+      padding:"0 2%",
+      borderTop:"1px solid #e5e5e5",
+      borderBottom:"1px solid #e5e5e5",
+      marginBottom:"5px"
     }}>
         {/* <select name="" id="">
             <option value="">Shop By Category</option>
