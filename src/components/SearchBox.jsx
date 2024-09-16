@@ -17,7 +17,7 @@ const SearchBox = () => {
         }}
       >
         <img src={Logo} alt="" height={30} />
-        <input
+        {/* <input
           type="text"
           style={{
             // display:"flex",
@@ -26,10 +26,10 @@ const SearchBox = () => {
             marginLeft: "1rem",
           }}
           placeholder="Search bu ISBN, Author, Title"
-        />
-        <button>
+        /> */}
+        {/* <button>
           <FcSearch />
-        </button>
+        </button> */}
       </div>
       <p style={{
         fontSize: "1.2rem",

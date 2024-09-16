@@ -1,25 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import topReads from "../../topReads.json";
+import db from "../../db.json";
 
-
-const Books = () => {
+const AllBooks = () => {
     const [data, setData] = useState([]);
-    const [search, setSearch] = useState("");
 
     useEffect(() => {
-        setData(topReads);
+        setData(db);
     }, []);
 
     return (
         <div className="books-container">
             {/* Input for search */}
-            <input 
-                type="text" 
-                placeholder="Search books..." 
-                value={search} 
-                onChange={(e) => setSearch(e.target.value)} 
-                className="search-input"
-            />
 
             {/* Display the books based on search */}
             <h1 style={{
@@ -27,10 +18,9 @@ const Books = () => {
                 fontSize: "44px",
                 fontWeight:"700",
                 padding:"1rem 0"
-            }}>Top Reads</h1>
+            }}>Fiction</h1>
             <div className="book-list">
                 {data
-                    .filter(book => book.title.toLowerCase().includes(search.toLowerCase()))
                     .map((book) => (
                         <div className="book-card" key={book.id}>
                             <img src={book.image} alt={book.title} className="book-image"/>
@@ -38,7 +28,7 @@ const Books = () => {
                                 {book.title} by {book.author}
                             </h3>
                             <h5>{book.currency} {book.price}</h5>
-                            <p>Rating: {book.rating} <span>({book.reviews})</span></p>
+                            <p>Rating: {book.rating}</p>
                             <p 
                                 className={book.availability === 'In Stock' 
                                     ? 'availability in-stock' 
@@ -54,4 +44,4 @@ const Books = () => {
     );
 }
 
-export default Books;
+export default AllBooks

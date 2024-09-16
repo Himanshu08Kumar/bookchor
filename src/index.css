@@ -13,3 +13,111 @@
   gap: 0 1rem;
   cursor: pointer;
 }
+
+/* Books container */
+.books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f6f7;
+  min-height: 100vh;
+}
+
+/* Search input styling */
+.search-input {
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* On focus change the border color */
+.search-input:focus {
+  border-color: #2ecc71;
+}
+
+/* Book list grid */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Book card styling */
+.book-card {
+  background-color: #fff;
+  border: 2px solid #eaeaea;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Book image styling */
+.book-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Book title styling */
+.book-title {
+  color: #2c3e50;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+/* Existing styles for the book list, input, and container will remain the same */
+
+/* Price and Rating styling */
+/* Existing styles for the book list, input, and container */
+
+.book-card h5 {
+  color: #34495e;
+  font-size: 18px;
+}
+
+.book-card p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Availability status */
+.availability {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.in-stock {
+  color: #27ae60; /* Green color for in stock */
+}
+
+.out-of-stock {
+  color: #e74c3c; /* Red color for out of stock */
+}
+
+
+
+/* Responsive styling for smaller devices */
+@media (max-width: 768px) {
+  .book-card {
+      padding: 15px;
+  }
+
+  .search-input {
+      width: 100%;
+  }
+}

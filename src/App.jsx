@@ -5,6 +5,7 @@ import SearchBox from './components/SearchBox'
 import Books from './components/Books'
 import Caurosel from './components/Caurosel'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AllBooks from './components/AllBooks'
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Header />
       <Caurosel/>
       <Books />
+      <AllBooks/>
     </>
   )
 }
