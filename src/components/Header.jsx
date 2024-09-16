@@ -23,7 +23,7 @@ const Header = () => {
             <option value="">Used Books</option>
         </select>
 
-        <ul className='couponsList'>
+        <ul >
             <li>Used Books</li>
             <li>39 Store</li>
             <li>59 Store</li>
