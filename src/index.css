@@ -1,0 +1,15 @@
+
+.coupons{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+.couponsList{
+  display: flex;
+  list-style: none;
+  gap: 0 1rem;
+  cursor: pointer;
+}
