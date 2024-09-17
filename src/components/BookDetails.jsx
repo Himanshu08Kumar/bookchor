@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../db.json";
+import db1 from "../../topReads.json"
 import { GiShoppingCart } from "react-icons/gi";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import Rating from "@mui/material/Rating";
@@ -12,7 +13,10 @@ const BookDetails = () => {
   const [book, setBook] = useState(null);
 
   useEffect(() => {
-    const selectedBook = db.find((b) => b.id === parseInt(id));
+    let selectedBook = db.find((b) => b.id === parseInt(id));
+    if (!selectedBook) {
+      selectedBook = db1.find((b) => b.id === parseInt(id));
+    }
     setBook(selectedBook);
   }, [id]);
 
@@ -43,12 +47,13 @@ const BookDetails = () => {
             <span style={{ fontWeight: "600", fontSize: "18px" }}>Genre:</span>{" "}
             {book.genre}
           </p>
+         {book.condition && 
           <p className="book-details-condition">
-            <span style={{ fontWeight: "600", fontSize: "18px" }}>
-              Condition:
-            </span>{" "}
-            {book.condition}
-          </p>
+          <span style={{ fontWeight: "600", fontSize: "18px" }}>
+            Condition:
+          </span>{" "}
+          {book.condition}
+        </p>}
           <p className="book-details-published-year">
             <span style={{ fontWeight: "600", fontSize: "18px" }}>
               Published Year:

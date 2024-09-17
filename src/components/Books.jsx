@@ -3,14 +3,20 @@ import topReads from "../../topReads.json";
 import Rating from "@mui/material/Rating";
 import { GiShoppingCart } from "react-icons/gi";
 import { MdRemoveShoppingCart } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Books = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     setData(topReads);
   }, []);
+
+  const handleClick = (bookId) =>{
+    navigate(`/book/${bookId}`);
+  }
 
   return (
     <div className="books-container">
@@ -40,7 +46,7 @@ const Books = () => {
             book.title.toLowerCase().includes(search.toLowerCase())
           )
           .map((book) => (
-            <div className="book-card" key={book.id}>
+            <div className="book-card" key={book.id}  onClick={() => handleClick(book.id)}>
               <img src={book.image} alt={book.title} className="book-image" />
               <h3 className="book-title">
                 {book.title} by {book.author}
